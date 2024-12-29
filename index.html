@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #paypal-button-container {
+            margin-top: 20px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement PayPal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=BAATWCE8xRPeHjHGLRD8jruIKU02RMVtJ-5PdkwIfe7aweDv3RDL6jC7D3DRerM8fF12iEc-u0XPiLpfTw&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+    <div id="paypal-container-ERZ23PTE6GL3L" class="container" ></div>
+    <script>
+        paypal.HostedButtons({
+        hostedButtonId: "ERZ23PTE6GL3L",
+        }).render("#paypal-container-ERZ23PTE6GL3L")
+    </script>
+</body>
+</html>
